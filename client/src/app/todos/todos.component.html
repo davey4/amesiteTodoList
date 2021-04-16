@@ -33,6 +33,7 @@
           />
         </div>
         <div class="tags">
+          <div>Tags:</div>
           <button (click)="addHigh($event)" [class.clicked]="high">
             High Priority
           </button>
@@ -41,6 +42,18 @@
           </button>
           <button (click)="addLow($event)" [class.clicked]="low">
             Low Priority
+          </button>
+        </div>
+        <div class="tags">
+          <button (click)="addWork($event)" [class.clicked]="work">Work</button>
+          <button (click)="addExercise($event)" [class.clicked]="exercise">
+            Exercise
+          </button>
+          <button (click)="addLeisure($event)" [class.clicked]="leisure">
+            Leisure
+          </button>
+          <button (click)="addErrand($event)" [class.clicked]="errand">
+            Errand
           </button>
         </div>
       </div>
@@ -62,7 +75,7 @@
         <div class="line">Title: {{ todo.title }}</div>
         <div class="line">Description: {{ todo.description }}</div>
         <div class="line">Due-Date: {{ todo.dueDate }}</div>
-        <div class="line">Priority: {{ todo.tags }}</div>
+        <div class="line">Tags: {{ todo.tags }}</div>
         <button class="delete" (click)="deleteTodo(i)" type="submit">
           <i class="material-icons">delete</i>
         </button>
