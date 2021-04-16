@@ -2,7 +2,7 @@
   <h1>Todo List</h1>
 </header>
 
-<section class="container">
+<section class="container main">
   <div class="add-todo">
     <form #form="ngForm" (ngSubmit)="addTodo(form)">
       <h2>New Todo</h2>
@@ -56,13 +56,13 @@
 </div>
 
 <section>
-  <div class="container">
+  <div class="list-container">
     <div class="list">
       <div class="item" *ngFor="let todo of todos; index as i">
         <div class="line">Title: {{ todo.title }}</div>
         <div class="line">Description: {{ todo.description }}</div>
         <div class="line">Due-Date: {{ todo.dueDate }}</div>
-        <div class="line">Tags: {{ todo.tags }}</div>
+        <div class="line">Priority: {{ todo.tags }}</div>
         <button class="delete" (click)="deleteTodo(i)" type="submit">
           <i class="material-icons">delete</i>
         </button>

@@ -12,13 +12,16 @@ h1 {
   justify-self: center;
   justify-content: center;
   margin-left: 25%;
-  /* border: 1px solid black; */
   padding: 1em;
   width: 50%;
-  background-color: white;
   border-radius: 0.5em;
-  margin-top: -2em;
   box-shadow: 0 2em 4em black 0.2;
+}
+
+.main {
+  /* border: 1px solid black; */
+  background-color: lightcyan;
+  margin-top: -2em;
 }
 
 input {
@@ -29,11 +32,12 @@ input {
 
 .item {
   background-color: lightskyblue;
-  width: 100%;
+  width: 80%;
   border-radius: 0.5em;
   box-shadow: 0 2em 4em black 0.2;
-  margin-top: 0.5em;
-  padding: 1em;
+  margin: 1.5em;
+  padding: 0.25em;
+  border: 1px solid black;
 }
 
 .line {
@@ -41,10 +45,8 @@ input {
 }
 
 button {
-  margin: 0.5em;
+  margin: 0.25em 0.25em 0 0.25em;
   font-size: 1em;
-  /* background-color: aqua; */
-  /* border-radius: 0.5em; */
   box-shadow: 0 2em 4em black 0.2;
 }
 
@@ -56,4 +58,14 @@ button {
 
 .clicked {
   background-color: black;
+}
+
+.list-container {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

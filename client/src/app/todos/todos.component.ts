@@ -20,7 +20,6 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     this.todos = this.stateService.getAllTodos();
-    console.log(this.todos);
   }
 
   addTodo(form: NgForm) {
@@ -35,6 +34,8 @@ export class TodosComponent implements OnInit {
     });
 
     this.high = false;
+    this.medium = false;
+    this.low = false;
     this.tags = [];
     this.formError = false;
     form.reset();
@@ -47,7 +48,6 @@ export class TodosComponent implements OnInit {
 
   sortAlpha() {
     this.todos = this.stateService.getTodosAlpha();
-    console.log(this.todos);
   }
 
   sortByDate() {

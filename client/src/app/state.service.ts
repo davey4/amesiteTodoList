@@ -36,4 +36,12 @@ export class StateService {
   deletetodo(index: number) {
     this.todos.splice(index, 1);
   }
+
+  getHigh() {
+    const high = this.todos.forEach((el) => {
+      let tags = el.tags;
+      return tags.filter((tag) => tag === 'High Priority');
+    });
+    return high;
+  }
 }
