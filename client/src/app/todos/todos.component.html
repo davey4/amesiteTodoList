@@ -1,0 +1,72 @@
+<header>
+  <h1>Todo List</h1>
+</header>
+
+<section class="container">
+  <div class="add-todo">
+    <form #form="ngForm" (ngSubmit)="addTodo(form)">
+      <h2>New Todo</h2>
+      <div>
+        <div>
+          <input
+            ngModel
+            required
+            name="title"
+            type="text"
+            class="input"
+            placeholder="Title"
+          />
+          <input
+            ngModel
+            required
+            name="description"
+            type="text"
+            class="input"
+            placeholder="Description"
+          />
+          <input
+            ngModel
+            required="string"
+            name="dueDate"
+            type="date"
+            placeholder="Due-Date"
+          />
+        </div>
+        <div class="tags">
+          <button (click)="addHigh($event)" [class.clicked]="high">
+            High Priority
+          </button>
+          <button (click)="addMedium($event)" [class.clicked]="medium">
+            Medium Priority
+          </button>
+          <button (click)="addLow($event)" [class.clicked]="low">
+            Low Priority
+          </button>
+        </div>
+      </div>
+      <button type="submit">Add Todo</button>
+    </form>
+    <p class="error" *ngIf="formError">Please Fill in all fields</p>
+  </div>
+</section>
+
+<div class="container">
+  <button (click)="sortAlpha()">Sort Alphabetically</button>
+  <button (click)="sortByDate()">Sort By Due Date</button>
+</div>
+
+<section>
+  <div class="container">
+    <div class="list">
+      <div class="item" *ngFor="let todo of todos; index as i">
+        <div class="line">Title: {{ todo.title }}</div>
+        <div class="line">Description: {{ todo.description }}</div>
+        <div class="line">Due-Date: {{ todo.dueDate }}</div>
+        <div class="line">Tags: {{ todo.tags }}</div>
+        <button class="delete" (click)="deleteTodo(i)" type="submit">
+          <i class="material-icons">delete</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
