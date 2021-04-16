@@ -30,3 +30,7 @@ To get a local copy up and running follow these simple steps
     1. fork and clone
     2. npm install in the client folder
     3. npm start in the client folder
+
+---
+
+    ![screenshot](assets/Screenshot.png)
