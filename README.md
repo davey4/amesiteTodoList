@@ -33,4 +33,4 @@ To get a local copy up and running follow these simple steps
 
 ---
 
-    ![screenshot](assets/Screenshot.png)
+![screenshot](assets/Screenshot.png)
